@@ -18,7 +18,7 @@
           <li>Open <span class="code">lab_5_json.html</span> in your browser</li>
           <li>Open your developer tools and look at the logged data</li>
           <li>In your console, write code to:
-            <ol>
+            <ol id="loopme">
               <li>At the click of the button above</li>
               <li>Loop through the 'countries' variable</li>
               <li>Replace this list's entries with country names</li>
@@ -285,6 +285,7 @@
       let obj = JSON.parse(sessionStorage.getItem('countries'));
       for(i=0; i<obj.length; i++){
         console.log(obj[i].name);
+        document.getElementById("loopme").innerHTML = obj[i].name;
       }
     }
 
