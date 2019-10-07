@@ -1,0 +1,155 @@
+.black-subhead{
+    width: 60%;
+    background-color: rgba(98, 46, 21, 0.5);
+}
+
+.black-subhead h1 {
+    color: #FEE8D2;
+    font-weight: bold;
+}
+
+.content {
+    width: 85%;
+    max-width: 1400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+h1 {
+    color: blue;
+    text-align: center;
+}
+.main-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+.main-section a {
+    text-decoration: none;
+    color:black;
+}
+.main-section a:hover {
+    color: red;
+}
+.main-section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 100px;
+}
+.main-section2 a {
+    text-decoration: none;
+    color:black;
+}
+.main-section2 a:hover {
+    color: red;
+}
+.header{
+    height: 500px;
+    background-position: 50% 50%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    /*background-position: center;*/
+    background-repeat: no-repeat;
+    background-image: url('../images/testimage.jpeg');
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    width: 50%;
+}
+.work-section {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px 50px 10px;
+    justify-content: space-between;
+    /*text-align: center;
+    width: 50%;*/
+}
+.job{
+    width: 50%;
+    padding: 0px 10px 0px 0px;
+}
+.job2{
+    width: 30%;
+    padding-top: 20px;
+}
+.image1 {
+    width: 30%;
+    height: auto;
+}
+.image2 {
+    width: 100%; 
+    height: auto;
+}
+.about-me h2{
+    color: goldenrod;
+}
+.main-section2 h2{
+    color: goldenrod;
+}
+.job-list{
+    list-style-type: square;
+}
+.bolded{
+    font-weight: bold;
+}
+hr.hr {
+    background-color: blue;
+    width: 100%;
+    height: 1px;
+    /*border-top: 1px solid black;*/
+}
+
+.columns{
+    background-color: white;
+}
+.columns h2{
+    text-align: center;
+    color: black;
+}
+
+.favorites {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0px 0px 50px 0px;
+    font-weight: bold;
+    color: orange;
+}
+.favorites li {
+    font-weight: normal;
+    color: blue;
+    margin-top: 10px;
+}
+.favorites ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 200px;
+}
+.favorites div{
+    border: 1px solid goldenrod;
+    padding: 15px;
+    width: 20%;
+}
+
+@media (max-width: 991px) {
+ /*nothing needed*/
+}
+
+@media (max-width: 767px) {
+ /*nothing needed*/
+}
+
+@media (max-width: 479px) {
+ /*nothing needed*/
+}
