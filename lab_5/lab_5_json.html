@@ -281,8 +281,11 @@
     console.log("List of countries in the world", countries);
 
     function loadData(countries){
-      
-
+      sessionStorage.setItem('countries', JSON.stringify(countries));
+      let obj = JSON.parse(sessionStorage.getItem('countries'));
+      for(i=0; i<obj.length; i++){
+        console.log(obj[i]);
+      }
     }
 
   </script>
