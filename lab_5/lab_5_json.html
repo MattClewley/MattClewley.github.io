@@ -289,9 +289,10 @@
         if(i<50){
         //console.log(obj[i].name);
         //document.getElementById("loopme").innerHTML = obj[i].name;
+          let k = Math.floor(Math.random() * (i + 1));
           var node = document.getElementById("loopme");
           var li = document.createElement('li');
-          var textnode = document.createTextNode(obj[i].name);
+          var textnode = document.createTextNode(obj[k].name);
           li.appendChild(textnode);
           node.appendChild(li);
         }
