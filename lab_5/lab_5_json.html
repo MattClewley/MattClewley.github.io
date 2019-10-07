@@ -292,7 +292,7 @@
           let k = Math.floor(Math.random() * (obj.length ));
           let looped = document.getElementById("loopme"); 
           let li = document.createElement('li'); //create more li for each country generated
-          let textnode = document.createTextNode(obj[k].name); //got this pa
+          let textnode = document.createTextNode(obj[k].name); 
           li.appendChild(textnode); //got this information from https://www.w3schools.com/jsref/met_document_createtextnode.asp
           looped.appendChild(li);
         }
