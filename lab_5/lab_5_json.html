@@ -283,7 +283,7 @@
     function loadData(){
       sessionStorage.setItem('countries', JSON.stringify(countries));
       const obj = JSON.parse(sessionStorage.getItem('countries'));
-      for(i=0; i<obj.length-1; i++){
+      for(i=0; i<obj.length; i++){
         //console.log(obj[i].name);
         //document.getElementById("loopme").innerHTML = obj[i].name;
         document.getElementsByTagName('li').innerHTML = obj[i].name;
