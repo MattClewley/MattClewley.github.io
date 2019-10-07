@@ -278,10 +278,10 @@
       { "name": "Zambia", "code": "ZM" },
       { "name": "Zimbabwe", "code": "ZW" }
     ]
-    console.log("List of countries in the world", countries);
+    //console.log("List of countries in the world", countries);
 
     function loadData(countries){
-      sessionStorage.setItem('countries', JSON.stringify(countries));
+      sessionStorage.setItem('countries', JSON.stringify(countries.code));
       let obj = JSON.parse(sessionStorage.getItem('countries'));
       for(i=0; i<obj.length; i++){
         console.log(obj[i]);
