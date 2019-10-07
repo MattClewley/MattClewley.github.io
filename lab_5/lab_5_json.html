@@ -10,7 +10,7 @@
   <div class="container">
     <div class="wrapper">
       <div class="header">Test JSON page</div>
-       <button class="button" onclick="loadData()">Load Some JSON</button> 
+       <button class="button" onclick="loadData()"">Load Some JSON</button> 
       <button class="button" onclick="console.log('You haven\'t written a function yet!');">Click me to replace list entries</button>
       <div class="content">
         <ul class="instructions">
@@ -280,11 +280,11 @@
     ]
     //console.log("List of countries in the world", countries);
 
-    function loadData(countries){
+    function loadData(){
       sessionStorage.setItem('countries', JSON.stringify(countries));
       let obj = JSON.parse(sessionStorage.getItem('countries'));
       for(i=0; i<obj.length; i++){
-        console.log(obj[i]);
+        console.log(obj[i].code);
       }
     }
 
