@@ -284,6 +284,7 @@
       sessionStorage.setItem('countries', JSON.stringify(countries));
       var obj = JSON.parse(sessionStorage.getItem('countries'));
       for(i=0; i<obj.length; i++){
+        if(i<50){
         //console.log(obj[i].name);
         //document.getElementById("loopme").innerHTML = obj[i].name;
           var node = document.getElementById("loopme");
@@ -291,6 +292,7 @@
           var textnode = document.createTextNode(i + " : " + obj[i].name);
           li.appendChild(textnode);
           node.appendChild(li);
+        }
       }
     }
 
