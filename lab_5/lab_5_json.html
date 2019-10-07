@@ -283,12 +283,12 @@
     function loadData(){
       sessionStorage.setItem('countries', JSON.stringify(countries));
       var obj = JSON.parse(sessionStorage.getItem('countries'));
+      var myList = document.getElementById('loopme');
+      loopme.innerHTML = '';
       for(i=0; i<obj.length; i++){
         if(i<50){
         //console.log(obj[i].name);
         //document.getElementById("loopme").innerHTML = obj[i].name;
-          var myList = document.getElementById('loopme');
-          loopme.innerHTML = '';
           var node = document.getElementById("loopme");
           var li = document.createElement('li');
           var textnode = document.createTextNode(i + " : " + obj[i].name);
