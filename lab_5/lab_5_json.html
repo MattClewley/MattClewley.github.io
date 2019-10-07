@@ -284,17 +284,17 @@
       sessionStorage.setItem('countries', JSON.stringify(countries));
       let obj = JSON.parse(sessionStorage.getItem('countries'));
       let myList = document.getElementById('loopme');
-      loopme.innerHTML = '';
+      loopme.innerHTML = ''; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
       for(i=0; i<obj.length; i++){
         if(i<50){
         //console.log(obj[i].name);
         //document.getElementById("loopme").innerHTML = obj[i].name;
           let k = Math.floor(Math.random() * (obj.length ));
-          let node = document.getElementById("loopme");
-          let li = document.createElement('li');
-          let textnode = document.createTextNode(obj[k].name);
-          li.appendChild(textnode);
-          node.appendChild(li);
+          let looped = document.getElementById("loopme"); 
+          let li = document.createElement('li'); //create more li for each country generated
+          let textnode = document.createTextNode(obj[k].name); //got this pa
+          li.appendChild(textnode); //got this information from https://www.w3schools.com/jsref/met_document_createtextnode.asp
+          looped.appendChild(li);
         }
       }
     }
