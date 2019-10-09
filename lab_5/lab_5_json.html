@@ -283,9 +283,8 @@
     function loadData(){
       sessionStorage.setItem('countries', JSON.stringify(countries));
       let obj = JSON.parse(sessionStorage.getItem('countries'));
-      let myList = document.getElementById('loopmes');
-      loopmes.innerHTML = ''; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
-      let olz = document.createElement('ol');
+      let myList = document.getElementById('loopme');
+      loopme.innerHTML = ''; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
       for(i=0; i<obj.length; i++){
         if(i<50){
         //console.log(obj[i].name);
@@ -298,7 +297,6 @@
           looped.appendChild(li);
         }
       } 
-      let ols = document.createElement('/ol');
     }
 
   </script>
