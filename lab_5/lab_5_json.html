@@ -284,7 +284,7 @@
       sessionStorage.setItem('countries', JSON.stringify(countries));
       let obj = JSON.parse(sessionStorage.getItem('countries'));
       let myList = document.getElementById('loopme');
-      loopme.innerHTML = '<ol> </ol>'; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
+      loopme.innerHTML = '<ol>'; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
       for(i=0; i<obj.length; i++){
         if(i<50){
         //console.log(obj[i].name);
@@ -297,6 +297,7 @@
           looped.appendChild(li);
         }
       }
+      loopme.innerHTML = '</ol>'; 
     }
 
   </script>
