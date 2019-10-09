@@ -13,7 +13,7 @@
        <button class="button" onclick="loadData()">Click Me to Replace List Entries</button> 
       <!--<button class="button" onclick="console.log('You haven\'t written a function yet!');">Click me to replace list entries</button>-->
       <div class="content">
-        <ul class="instructions">
+        <ul class="instructions" id="loopmes">
           <li>Delete and re-clone the class repository</li>
           <li>Open <span class="code">lab_5_json.html</span> in your browser</li>
           <li>Open your developer tools and look at the logged data</li>
@@ -283,8 +283,9 @@
     function loadData(){
       sessionStorage.setItem('countries', JSON.stringify(countries));
       let obj = JSON.parse(sessionStorage.getItem('countries'));
-      let myList = document.getElementById('loopme');
-      loopme.innerHTML = ''; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
+      let myList = document.getElementById('loopmes');
+      loopmes.innerHTML = ''; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
+      let olz = document.createElement('ol');
       for(i=0; i<obj.length; i++){
         if(i<50){
         //console.log(obj[i].name);
@@ -297,6 +298,7 @@
           looped.appendChild(li);
         }
       } 
+      let ols = document.createElement('/ol');
     }
 
   </script>
