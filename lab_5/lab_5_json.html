@@ -285,6 +285,7 @@
       let obj = JSON.parse(sessionStorage.getItem('countries'));
       let myList = document.getElementById('loopme');
       loopme.innerHTML = ''; //couldn't replace the current li bc only 4 of them and needed 50 so I deleted them
+      document.getElementById("loopme").style.listStyleType = "decimal";
       for(i=0; i<obj.length; i++){
         if(i<50){
         //console.log(obj[i].name);
