@@ -7,7 +7,10 @@ body {
   background: #eee;
 }
 .spacer {
-  margin-top: 10px;
+  height: 10px;
+  width: 100%;
+  color: white;
+  background-color: white;
 }
 
 h1,
