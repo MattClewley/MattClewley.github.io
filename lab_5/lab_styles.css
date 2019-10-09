@@ -6,6 +6,9 @@ body {
   padding: 0 10px;
   background: #eee;
 }
+.spacer {
+  margin-top: 10px;
+}
 
 h1,
 h2,
