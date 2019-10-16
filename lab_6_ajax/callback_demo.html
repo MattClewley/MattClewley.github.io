@@ -45,7 +45,7 @@
           return res;
         })
         .then(res => res) // here we're just passing along res in a shorter format
-        .then(res => res.map(c => c.countries)) // // Gotta know what values are available on the response - get this from your API
+        .then(res => res.map(c => c.code)) // // Gotta know what values are available on the response - get this from your API
         .then(codes => document.querySelector(".content").innerText = codes)
         .catch((err) => {console.log(err)});
       }
