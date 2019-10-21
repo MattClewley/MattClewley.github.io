@@ -21,7 +21,7 @@
         .then(res => res.json())
         .then(res => res.map(c => c.name))
         .then(name => document.querySelector(".content").innerText = name);
-        //return ?;
+        return name;
     }
     //.then(function(arg){});
   </script>
