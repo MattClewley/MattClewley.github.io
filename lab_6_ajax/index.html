@@ -19,24 +19,27 @@
     function loadData() {
       fetch('ajax_sample.json')
         .then(res => res.json())
-        .then(res => res.map(c => c.name))
-
-        for(i=0; i<obj.length; i++){
-        if(i<50){
-        //console.log(obj[i].name);
-        //document.getElementById("loopme").innerHTML = obj[i].name;
-          let k = Math.floor(Math.random() * (obj.length ));
-          let looped = document.getElementById("loopme"); 
-          let li = document.createElement('li'); //create more li for each country generated
-          let textnode = document.createTextNode(obj[k].name); 
-          li.appendChild(textnode); //got this information from https://www.w3schools.com/jsref/met_document_createtextnode.asp
-          looped.appendChild(li);
+        .then(res => res.map(c => c))
+        .then((res) => {
+         let ul = document.createElement('ol');
+         let codes = document.querySelector(".content");
+         codes.innerHTML = '';
+        for(i=0; i<res.length; i++){
+        if(i<15){
+          let k = Math.floor(Math.random() * (res.length ));
+          let looped = document.getElementsByClassName("content"); 
+          let li = document.createElement('li'); 
+          let textnode = document.createTextNode(res[k].name); 
+          li.appendChild(textnode); 
+          ul.appendChild(li);
         }
-      } 
-
-        .then(name => document.querySelector(".content").innerText = name);
+      }
+      codes.append(ul);
+      return codes;
+      }
+      )
+        //.then(name => document.querySelector(".content").innerText = looped);
     }
-    //.then(function(arg){});
   </script>
 </body>
 
