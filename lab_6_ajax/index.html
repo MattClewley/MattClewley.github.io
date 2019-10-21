@@ -19,8 +19,8 @@
     function loadData() {
       fetch('ajax_sample.json')
         .then(res => res.json())
-        .then(res => res.map(c => c.country))
-        .then(country => document.querySelector(".content").innerText = country);
+        .then(res => res.map(c => c.name))
+        .then(name => document.querySelector(".content").innerText = name);
         //return ?;
     }
     //.then(function(arg){});
