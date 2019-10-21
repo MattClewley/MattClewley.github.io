@@ -20,6 +20,7 @@
       fetch('ajax_sample.json')
         .then(res => res.json())
         .then(res => res.map(c => c.code))
+        .then(code => res.map(code => country))
         .then(codes => document.querySelector(".content").innerText = codes);
     }
   </script>
