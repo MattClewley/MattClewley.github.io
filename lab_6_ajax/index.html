@@ -19,10 +19,11 @@
     function loadData() {
       fetch('ajax_sample.json')
         .then(res => res.json())
-        .then(res => res.map(c => c.code))
-        .then(code => res.map(code => country))
-        .then(codes => document.querySelector(".content").innerText = codes);
+        .then(res => res.map(c => c.country))
+        .then(country => document.querySelector(".content").innerText = country);
+        //return ?;
     }
+    //.then(function(arg){});
   </script>
 </body>
 
