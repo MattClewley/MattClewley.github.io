@@ -31,7 +31,28 @@
           li.appendChild(textnode); 
           ul.appendChild(li);
       }
+      /*let newli = document.createElement('li');
+      let myRoute = res.find(132);
+      console.log(myRoute);
+      let newtextnode = document.createTextNode(myRoute);
+      newli.appendChild(newtextnode);
+      ul.appendChild(newli);*/
+      var desc = res.find(function(e) {
+        return e.title == '132 The Varsity';
+      })
+      if(desc) {
+        let newli = document.createElement('li'); 
+        let newtextnode = document.createTextNode('Personal Route: ' + desc.route_id + ' -> '+ desc.title);
+        newli.appendChild(newtextnode); 
+        ul.appendChild(newli);
+        //console.log(desc.route_id + ' takes me to: ' + desc.title);
+      }
       codes.append(ul);
+
+      /*let heads = document.querySelector(".header");
+         heads.innerHTML = '';
+         heads.append(ul)*/
+
       return codes;
       }
       )
