@@ -19,7 +19,22 @@
     function loadData() {
       fetch('https://api.umd.io/v0/bus/routes')
         .then(res => res.json())
-        .then(data => document.querySelector(".content").innerText = data);
+        .then(res => res.map(c => c))
+        .then((res) => {
+        //.then(data => document.querySelector(".content").innerText = data);
+        let ul = document.createElement('ul');
+         let codes = document.querySelector(".content");
+         codes.innerHTML = '';
+        for(i=0; i<res.length; i++){
+          let li = document.createElement('li'); 
+          let textnode = document.createTextNode(res[i].route_id + ': ' + res[i].title); 
+          li.appendChild(textnode); 
+          ul.appendChild(li);
+      }
+      codes.append(ul);
+      return codes;
+      }
+      )
     }
   </script>
 </body>

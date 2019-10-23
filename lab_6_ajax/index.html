@@ -29,7 +29,7 @@
           let k = Math.floor(Math.random() * (res.length ));
           let looped = document.getElementsByClassName("content"); 
           let li = document.createElement('li'); 
-          let textnode = document.createTextNode(res[k].name); 
+          let textnode = document.createTextNode(res[k].code + ' -> ' + res[k].name); 
           li.appendChild(textnode); 
           ul.appendChild(li);
         }
