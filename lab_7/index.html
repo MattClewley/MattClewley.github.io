@@ -45,9 +45,13 @@
         let newtextnode = document.createTextNode('Personal Route: ' + desc.route_id + ' -> '+ desc.title);
         newli.appendChild(newtextnode); 
         ul.appendChild(newli);
+        let newtitle = document.getElementsByClassName("header");
+        newtitle.innerHTML = newtextnode;
         //console.log(desc.route_id + ' takes me to: ' + desc.title);
       }
       codes.append(ul);
+      
+
 
       /*let heads = document.querySelector(".header");
          heads.innerHTML = '';
