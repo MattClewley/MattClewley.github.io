@@ -21,7 +21,6 @@
         .then(res => res.json())
         .then(res => res.map(c => c))
         .then((res) => {
-        //.then(data => document.querySelector(".content").innerText = data);
         let ul = document.createElement('ul');
          let codes = document.querySelector(".content");
          codes.innerHTML = '';
@@ -31,13 +30,8 @@
           li.appendChild(textnode); 
           ul.appendChild(li);
       }
-      /*let newli = document.createElement('li');
-      let myRoute = res.find(132);
-      console.log(myRoute);
-      let newtextnode = document.createTextNode(myRoute);
-      newli.appendChild(newtextnode);
-      ul.appendChild(newli);*/
-      var desc = res.find(function(e) {
+      //codes.append(ul);
+      let desc = res.find(function(e) {
         return e.title == '132 The Varsity';
       })
       if(desc) {
@@ -45,21 +39,12 @@
         let newtextnode = document.createTextNode('Personal Route: ' + desc.route_id + ' -> '+ desc.title);
         newli.appendChild(newtextnode); 
         ul.appendChild(newli);
-        let newtitle = document.getElementsByClassName("header");
-        newtitle.innerHTML = newtextnode;
-        //console.log(desc.route_id + ' takes me to: ' + desc.title);
+        let titl = document.querySelector(".header");
+         titl.innerHTML = "UMD Bus Route " + desc.title;
       }
       codes.append(ul);
-      
-
-
-      /*let heads = document.querySelector(".header");
-         heads.innerHTML = '';
-         heads.append(ul)*/
-
       return codes;
-      }
-      )
+      })   
     }
   </script>
 </body>
