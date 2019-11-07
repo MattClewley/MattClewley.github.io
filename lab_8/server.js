@@ -46,8 +46,18 @@ app.get('/api', (req, res) => {
   fetch(baseURL)
     .then((r) => r.json())
     .then((data) => {
-      console.log(data);
-      res.send({ data: data });
+      // eslint-disable-next-line no-param-reassign
+      data = data.filter((data) => data.dept_id === 'INST');
+      const array = {};
+      for (let i = 0; i < data.length; i+=1) {
+        array[data[i].course_id] = data[i].name;
+      }
+      const myjson = JSON.stringify(array);
+      res.send({ array });
+      //console.log(myjson);
+      // console.log(data);
+      // res.send({ data: data });
+      // .then(res => res.data.map(c => `${c.course_id} ${c.name}`))
     })
     .catch((err) => {
       console.log(err);
