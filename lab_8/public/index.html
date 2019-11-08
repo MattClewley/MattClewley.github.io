@@ -28,8 +28,11 @@
               for(const [key, val] of Object.entries(res[i])){
                 //let looped = document.getElementsByClassName("content"); 
                 let li = document.createElement('li'); 
-                let textnode = document.createTextNode(key + " : " + val); 
-                li.appendChild(textnode); 
+                let keytext = document.createTextNode(key); 
+                let valtext = document.createTextNode(val); 
+                li.appendChild(keytext); 
+                li.append(" : ");
+                li.appendChild(valtext);
                 ul.appendChild(li);
               }
           }
