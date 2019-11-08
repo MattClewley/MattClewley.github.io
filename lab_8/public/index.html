@@ -20,22 +20,15 @@
       //console.log('fetch'); // confirm code is running on click
       fetch('/api')
         .then(res => res.json())
-        //.then(res => JSON.parse(res))
         .then(res => {
-          //console.log(res); // logging step to check what we got
-          /*for (var key in res) {
-            console.log(key);
-            console.log(res[key]);
-          }*/
-          //return res;
           let ul = document.createElement('ol');
-            let codes = document.querySelector(".content");
-            codes.innerHTML = '';
-            for(var key in res){
-              for(var val in res[key]){
-                let looped = document.getElementsByClassName("content"); 
+          let codes = document.querySelector(".content");
+          codes.innerHTML = '';
+          for(var i in res){
+              for(const [key, val] of Object.entries(res[i])){
+                //let looped = document.getElementsByClassName("content"); 
                 let li = document.createElement('li'); 
-                let textnode = document.createTextNode(res[key][val]); 
+                let textnode = document.createTextNode(key + " : " + val); 
                 li.appendChild(textnode); 
                 ul.appendChild(li);
               }

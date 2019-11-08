@@ -52,7 +52,8 @@ app.get('/api', (req, res) => {
       for (let i = 0; i < data.length; i+=1) {
         array[data[i].course_id] = data[i].name;
       }
-      const myjson = JSON.stringify(array);
+      //const myjson = JSON.stringify(array);
+      console.log(array);
       res.send({ array });
       //console.log(myjson);
       // console.log(data);
