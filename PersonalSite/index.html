@@ -1,12 +1,156 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--<link rel="stylesheet" type="text/css" href="css/styles.css" />-->
-    <title>A quick test</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Matthew Clewley | Web Developer</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script> 
+    $(function(){
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
   </head>
   <body>
-    <div class="header">
-      <div class="black-subhead">
-        <h1>Matthew Clewley</h1>
+    <div class="top-section">
+      <div class="navbar">
+        <div class="logo">
+          <a href="/"><img src="images/favicon.png"></a>
+        </div>
+        <div class="rightnav">
+          <div><a href="#projects">Work</a></div>
+          <div><a href="#contact">Contact</a></div>
+        </div>
+      </div>
+      </div>
+      <div class="body-section">
+      <div class="hero-section">
+        <p id="greeting"></p>
+        <h1>I'm Matthew Clewley, a <a href="">developer</a> currently attending the University of Maryland and working for <a href="https://www.mojo.biz/" target="_blank">MOJO</a>.
+        </h1>
+      </div>
+    
+      <div class="workexp">
+        <div class="leftwork">
+          <h5>Currently:</h5>
+		  <div class="work-image"><img src="images/mojo-logo-01.png"></div>
+        </div>
+        <div class="rightwork">
+          <h5>Previously:</h5>
+		  <div class="work-image"><img src="images/UMD-logo.png"></div>
+        </div>
       </div>
     </div>
-</body>
+
+    <div class="project-section" id="projects">
+		<h4>Featured Projects</h4>
+		<div class="featuredwork">
+      <a class="project" href="project1.html">
+        <div>
+          <div class="colored-background1"><img src="images/polygonsoftware.svg"></div>
+          <div class="project-name"><p>Polygon Software</p></div>
+        </div>
+      </a>
+      <a class="project" href="project2.html">
+        <div>
+          <div class="colored-background2"><img src="images/pgpickuplogo.png"></div>
+          <div class="project-name"><p>Pickup PG</p></div>
+        </div>
+      </a>
+      <a class="project" href="project3.html">
+        <div>
+          <div class="colored-background2"><img src="images/glyphtechlogo.svg"></div>
+          <div class="project-name"><p>GlyphTech</p></div>
+        </div>
+      </a>
+      <a class="project" href="project4.html">
+        <div>
+          <div class="colored-background1"><img src="images/ARClogo.svg"></div>
+          <div class="project-name"><p>ARC Construction</p></div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="morework">
+      <h2>Additional Work</h2>
+    </div>
+    <div class="container">
+      <div class="rectangle">
+        <div class="rect-main">
+          <p class="proj-title">ARC Firestop</p>
+          <p class="proj-exp">Development, QA</p>
+        </div>
+        <div class="rect-secondary">
+          <p style="font-size: 18px;">MOJO Creative Digital</p>
+          <p style="font-size: 18px;">2019</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="rectangle rectangle2">
+        <div class="rect-main">
+          <p class="proj-title">AAGOP</p>
+          <p class="proj-exp">Development</p>
+        </div>
+        <div class="rect-secondary">
+          <p style="font-size: 18px;">MOJO Creative Digital</p>
+          <p style="font-size: 18px;">2019</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="rectangle">
+        <div class="rect-main">
+          <p class="proj-title">HAVTECH Events</p>
+          <p class="proj-exp">Development, UX</p>
+        </div>
+        <div class="rect-secondary">
+          <p style="font-size: 18px;">MOJO Creative Digital</p>
+          <p style="font-size: 18px;">2019, 2020</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!--<footer id="contact" class="footer">
+      <div class="talk">
+        <h3>Want to get in contact? <a href="mailto: mattclew21@gmail.com">Let's talk.</a></h3>
+      </div>
+      <div class="links">
+        <a href="www.github.com/MattClewley"><p>Github</p></a>
+        <a href="www.github.com/MattClewley"><p>LinkedIn</p></a>
+        <a href="www.github.com/MattClewley"><p>Twitter</p></a>
+        <a href="www.github.com/MattClewley"><p>Resume</p></a>
+      </div>
+    </footer>-->
+
+    <div id="footer"></div>
+
+  </body>
+  <script>
+    let myDate = new Date();
+    let hrs = myDate.getHours();
+    let greet;
+    let greetclass;
+    if (hrs < 12) {
+      greet = 'Good Morning';
+      greetclass = "morning";
+    }
+    else if (hrs >= 12 && hrs <= 17) {
+      greet = 'Good Afternoon';
+      greetclass = "afternoon";
+    }
+    else if (hrs >= 17 && hrs <= 24) {
+      greet = 'Good Evening';
+      greetclass = "night";
+    }
+
+    document.getElementById('greeting').innerHTML =
+        '<b class=' + greetclass + '>' + greet + '</b> and welcome to my site!';
+</script>
+</html>
+

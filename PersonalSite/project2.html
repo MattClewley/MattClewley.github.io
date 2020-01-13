@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+    </script>
+    <script> 
+    $(function(){
+      $("#footer").load("footer.html"); 
+    });
+    </script> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Matthew Clewley | Web Developer</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+</
+head>
+<body>
+    <div class="top-section">
+        <div class="navbar">
+          <div class="logo">
+            <a href="/"><img src="images/favicon.png"></a>
+          </div>
+          <div class="rightnav">
+            <div><a href="/#projects">Work</a></div>
+            <div><a href="#contact">Contact</a></div>
+          </div>
+        </div>
+        </div>
+    <header class="projecthead" style="background-image: url(images/pickupmain.svg);">
+        <h1 style="color:black;">Pickup PG</h1>
+    </header>
+    <div class="main-content">
+        <h2><em>Development, UX, UI, & Lead Role</em></h2>
+        <p class="description">
+            Lorem ipsum dolor amet woke trust fund pop-up pitchfork green juice bushwick. Butcher 90's iPhone schlitz, poke shaman cold-pressed pug heirloom locavore lo-fi. 
+            Twee small batch scenester, 
+            tumeric bicycle rights meh fanny pack heirloom. 
+            Williamsburg lomo kickstarter, pabst vegan man braid narwhal tumeric tumblr raw denim la croix brooklyn chicharrones fanny pack. Post-ironic trust fund chillwave meh 
+            williamsburg. 
+            Blog af narwhal, kale chips four dollar toast mustache readymade lomo trust fund pop-up normcore chicharrones street art seitan cred.
+
+            Pinterest brooklyn seitan cliche wolf, vaporware retro tofu pitchfork microdosing 90's kombucha copper mug. Man bun lomo humblebrag everyday carry, street art hell
+             of twee cray synth. 
+            Farm-to-table everyday carry microdosing bushwick, hashtag slow-carb umami poke health goth vexillologist normcore. Gluten-free chambray mustache echo park. 
+            Readymade hoodie salvia next level.
+
+            Typewriter irony umami tumeric four dollar toast cardigan whatever pop-up direct trade everyday carry quinoa. 
+            Stumptown four loko actually crucifix, sriracha pok pok trust fund biodiesel chartreuse irony truffaut taiyaki 8-bit deep v. 
+            Tousled quinoa mlkshk iceland. 
+            Neutra health goth vice microdosing, normcore cred lyft hashtag tattooed hell of. Pitchfork blog plaid intelligentsia, shoreditch artisan small batch lo-fi 
+            bushwick cloud bread. 
+            Forage trust fund DIY taxidermy godard whatever succulents aesthetic XOXO bespoke farm-to-table snackwave air plant artisan.
+
+            Oh. You need a little dummy text for your mockup? How quaint.
+
+            I bet you’re still using Bootstrap too…
+        </p>
+        <div class="project-image">
+            <img src="images/pgpickuphomepage.png">
+        </div>
+        <br />
+        <div class="project-image">
+            <img src="images/wherewecleanpage.png">
+        </div>
+        <p class="description">
+            Yada Yada Yada more more more stuff here.
+            Oh. You need a little dummy text for your mockup? How quaint.
+
+            I bet you’re still using Bootstrap too…
+        </p>
+
+    </div>
+    <br />
+
+    <script language="javascript" type="text/javascript">
+        let scrt_var = 1; 
+        let urlz = window.location.href;
+        let style;
+        let lastslash = urlz.match(/\/([^\/]+)\/?$/)[1];
+        let finalurl = lastslash.charAt(7);
+        var indexed = parseInt(finalurl, 10);
+        console.log(typeof(indexed));
+    
+        if(indexed > 1 && indexed < 4 ) {
+            scrt_var_prev = indexed - 1;
+            scrt_var_next = indexed + 1;
+        }
+        else if(indexed == 1 && indexed < 4) {
+            scrt_var_next = indexed + 1;
+            scrt_var_prev = indexed - 1;
+            document.getElementById("prev").setAttribute("onclick", "location.href='http://religiasatanista.ro'");
+        }
+        else if(indexed == 4 && indexed != 1){
+            scrt_var_prev = indexed - 1;
+        }
+        else {
+            scrt_var_prev = indexed;
+            scrt_var_next = indexed;
+        }
+    
+    
+    </script>
+        <!--<a href="project" onclick="location.href=this.href+scrt_var +'.html';return false;">Link</a>-->
+    
+        <div class="moreproj">
+            <a href="project" onclick="location.href=this.href+scrt_var_prev +'.html';return false;" id="prev" class="previous">
+                    <p>Previous Project</p>
+                    <img src="images/arrowleft.png">
+            </a>
+    
+            <div class="vertical-line"></div>
+    
+            <a href="project" id="next" onclick="location.href=this.href+scrt_var_next +'.html';return false;" class="next">
+                    <p>Next Project</p>
+                    <img src="images/arrowright.png">
+            </a>
+        </div>
+
+    <br />
+    <div id="footer"></div>    
+</body>
