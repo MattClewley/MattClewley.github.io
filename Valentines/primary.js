@@ -1,3 +1,4 @@
+<script>
 $(document).ready(function(){
   $('.title').click(function(){
     $('.container').addClass('open');
@@ -8,3 +9,4 @@ $(document).ready(function(){
     $('.container').removeClass('open');
   });
 });
+</script>
