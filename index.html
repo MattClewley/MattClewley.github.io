@@ -1,137 +1,214 @@
-<html lang="en">
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>A quick test</title>
-  </head>
-  <body>
-    <div class="header">
-      <div class="black-subhead">
-        <h1>Matthew Clewley</h1>
-      </div>
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="main.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body{
+  background: url(https://subtlepatterns.com/patterns/noise_lines.png);
+  font-family: 'Pacifico', cursive;
+  overflow: hidden;
+  color: #fff;
+}
+.bgoverlay{
+  background: rgb(103,58,183);
+  background: rgba(103,58,183,0.7);
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+.container{
+  position: relative;
+  margin: 120px auto 0 auto;
+  width: 320px;
+}
+
+
+.ico{
+  display: block;
+  width: 320px;
+  height: 320px;
+}
+.open .ico{
+  animation: open 4s;
+  transform: scale(10);
+}
+.ico .title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -95px;
+  margin-top: -73px;
+  z-index: 4;
+  font-size: 50px;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.open .ico .title{
+  opacity: 0;
+  transition: all 0.3s ease;
+  top:-100px;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  position: absolute;
+  top:0;
+  left:0;
+}
+.ico:before,
+.ico:after,
+.ico2:before,
+.ico2:after{
+  display: block;
+  font-size: 20em;
+  color: #ff4081;
+  content: "\f004";
+  font-family: FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ico2:before,
+.ico2:after{
+  color: #e91e63;
+}
+.ico:before{
+  z-index: 3;
+}
+.ico:after{
+  animation: explode 4s infinite;
+}
+
+
+.ico2:before{
+  animation: explodeSmall 3s infinite;
+}
+.ico2:after{
+  animation: explodeSmall 2s infinite;
+}
+
+
+.endtext{
+  opacity:0;
+  position: absolute;
+  top:-100px;
+  width:100%;
+}
+.open .endtext{
+  top:0;
+  opacity: 1;
+  animation: show 5s;
+}
+.endtext .close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+.endtext h1,
+.endtext h2,
+.endtext h3{
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+  text-align: center;
+  font-weight: normal;
+}
+.endtext h1{
+  font-size: 50px;
+}
+.endtext h2{
+  font-size: 30px;
+}
+.endtext h3{
+  font-size: 20px;
+}
+
+
+@keyframes explode {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+}
+@keyframes explodeSmall {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+}
+
+
+@keyframes open {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(10);
+    }
+}
+
+@keyframes show {
+    from {
+      opacity: 0;
+      top: -100px;
+    }
+    to {
+      opacity: 1;
+      top:0;
+    }
+}
+
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.title').click(function(){
+    $('.container').addClass('open');
+  });
+  
+  
+  $('.close').click(function(){
+    $('.container').removeClass('open');
+  });
+});
+</script>
+</head>
+<body>
+<div class="bgoverlay">
+  <div class="container">
+    <span class="ico">
+      <span class="ico2"></span>
+      <span class="title">Click Me</span>
+    </span>
+    <div class="endtext">
+      <span class="close" title="Restart"><i class="fa fa-times"></i></span>  
+      <h1>I love you baby</h1>
+      <h2>Be my valentine?</h2>
+      <h3>~Matt</h3>
     </div>
-    <div class="content">
-      <div class="main-section">
-        <img src="images/matt-img.jpg" alt="road during fall" class="image1" />
-        <div class="about-me">
-          <h2>Who am I?</h2>
-          <p>
-            My name is
-            <strong
-              ><a
-                href="https://www.linkedin.com/in/matthew-clewley-79a915140/"
-                target="_blank"
-                >Matthew Clewley</a
-              ></strong
-            >. I am a Senior Information Science major at the University of
-            Maryland. My professional goals are to become a full stack developer
-            and to get involved in helping others learn about web development
-            and programming. I enjoy practicing my Spanish, thanks to Duolingo,
-            and hope that one day I can use it for travelling or in the
-            workplace.
-          </p>
-        </div>
-      </div>
-      <div class="main-section2">
-        <h2>My Work Experience</h2>
-        <hr class="hr" />
-
-        <div class="work-section">
-          <div class="job">
-            <h3>Junior Web Developer</h3>
-            <p class="description">
-              As a junior web developer at Mojo Creative Digital, I work to
-              produce Drupal sites for clients. I have been working at Mojo
-              since January 2019.
-            </p>
-            <div class="bolded">Several of my work responsibilities are:</div>
-            <ul class="job-list">
-              <li>Speed testing, debugging, and performing SEO on websites.</li>
-              <li>Integrating API systems.</li>
-              <li>Developing Drupal 7 and 8 sites.</li>
-            </ul>
-          </div>
-          <div class="job2">
-            <img src="images/mojo-logo-01.png" class="image2" />
-          </div>
-        </div>
-
-        <div class="work-section">
-          <div class="job">
-            <h3>University of Maryland, Teaching Assistant</h3>
-            <p class="description">
-              I was a TA for the class, Introduction to Information Science,
-              during the Fall Semester of 2018 at the University of Maryland,
-              College Park.
-            </p>
-            <div class="bolded">Several of my work responsibilities were:</div>
-            <ul class="job-list">
-              <li>Grading students submitted assignments.</li>
-              <li>Holding office hours to assist students.</li>
-              <li>
-                Weekly meetings with the professor to review the curriculum and
-                expectations set for students.
-              </li>
-            </ul>
-          </div>
-          <div class="job2">
-            <img src="images/UMD-logo.png" class="image2" />
-          </div>
-        </div>
-
-        <div class="work-section">
-          <div class="job">
-            <h3>Security Operations Center Monitor, UMPD</h3>
-            <p class="description">
-              From March 2018 to January 2019 I worked at the UMD Police
-              Department as a Security Monitor within the SOC department.
-            </p>
-            <div class="bolded">Several of my work responsibilities were:</div>
-            <ul class="job-list">
-              <li>Conducting hourly rounds on selected cameras on campus.</li>
-              <li>Writing police reports for incidents.</li>
-              <li>
-                Collaborating with Officers and other Monitors during real-time
-                incidents.
-              </li>
-            </ul>
-          </div>
-          <div class="job2">
-            <img src="images/UMD-logo.png" class="image2" />
-          </div>
-        </div>
-        <!--<img src="images/canada-flag.jpg" class="image2">-->
-      </div>
-    </div>
-    <div class="columns">
-      <h2>Here are some of my favorite things, in columns.</h2>
-      <div class="favorites">
-        <div class="movies">
-          My favorite movies are:
-          <ol>
-            <li>Into the Wild</li>
-            <li>Call Me By Your Name</li>
-            <li>Empire Strikes Back</li>
-          </ol>
-        </div>
-
-        <div class="albums">
-          My favorite albums are:
-          <ol>
-            <li>EP -Childish Gambino</li>
-            <li>Carrie & Lowell -Sufjan Stevens</li>
-            <li>Backless -Eric Clapton</li>
-          </ol>
-        </div>
-
-        <div class="shows">
-          My favorite shows are:
-          <ol>
-            <li>Bobs Burgers</li>
-            <li>The Good Place</li>
-            <li>King of the Hill</li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>
